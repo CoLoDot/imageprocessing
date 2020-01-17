@@ -12,5 +12,9 @@ class TestImageProcessing(unittest.TestCase):
         lena = LenaIP()
         self.assertEqual(lena.convert_lena_to_grayscale(), [(512, 512), 162])
 
+    def test_grayscale_lena_saving(self):
+        lena = LenaIP()
+        self.assertEqual(lena.save_lena_grayscale(), 1)
+
 if __name__ == '__main__':
     unittest.main()

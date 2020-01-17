@@ -18,3 +18,11 @@ class LenaIP:
         oct_val = grayscale[0][0]
         print(dimension, oct_val)
         return [dimension, oct_val]
+
+    def save_lena_grayscale(self):
+        grayscale = cv.cvtColor(self.matrix, cv.COLOR_BGR2GRAY)
+        cv.imwrite('img/grayscale_lena.jpg', grayscale)
+        return 1
+
+
+
